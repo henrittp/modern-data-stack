@@ -12,6 +12,8 @@ I'll improve it later when it becomes more 'definitive'. It's just a sketch, but
 ![Mock Architecture](<screenshots/mock_architecture.jpg>)
 
 ## Getting started
+
+### AWS CLI
 First of all, install AWS CLI if you don't have it, as we'll be using AWS EKS to deploy everything we build. Run `msiexec.exe` in PowerShell (Which provides the means to install, modify, and perform operations on Windows Installer from the command line):
 
 `msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi`
@@ -19,5 +21,7 @@ First of all, install AWS CLI if you don't have it, as we'll be using AWS EKS to
 Just hit the next button as many times as necessary and voilà. If for some reason you need to read the official AWS doc for other OS and other means of setting this up, you can check it out by clicking right [here](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 
 ![AWS CLI Installed](<screenshots/aws_cli_completed.png>)
+
+After installation, further configurations are needed to make sure you have the necessary permissions, which includes configuring IAM roles in the AWS console.
 
 
