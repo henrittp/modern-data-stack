@@ -1,0 +1,45 @@
+Passo 1: Configurar o Cluster Kubernetes com Terraform
+Finalize a Configuração do EKS:
+Dentro da pasta /terraform, desenvolva o código necessário para provisionar o cluster EKS. Isso deve incluir a criação do VPC, subnets, grupo de segurança e o próprio cluster EKS.
+Teste e aplique sua configuração Terraform para criar o cluster na AWS.
+
+Passo 2: Preparar Helm Charts
+Prepare Helm Charts Básicos:
+Na pasta /kubernetes/helm/charts, para cada serviço (Airbyte, Airflow, etc.), crie os arquivos Chart.yaml e values.yaml básicos.
+Se disponíveis, utilize Helm charts oficiais para cada ferramenta, que podem ser encontrados no Artifact Hub ou nos repositórios dos projetos.
+Adicione qualquer configuração inicial necessária no values.yaml para cada chart.
+
+Passo 3: Script de Implantação
+Escreva o Script de Deploy:
+No arquivo /scripts/deploy.sh, escreva um script shell para executar comandos de implantação, como inicializar o Helm, adicionar repositórios de charts e instalar ou atualizar charts no cluster EKS.
+
+Passo 4: Testes Locais
+Testes Locais (Opcional):
+Se aplicável, utilize ferramentas como Minikube, kind ou Docker Desktop para testar os charts Helm localmente antes de implantá-los no cluster EKS.
+
+Passo 5: Configuração de CI/CD com ArgoCD
+Configurar ArgoCD:
+Use a pasta /kubernetes/helm/charts/argocd para configurar o ArgoCD com um chart Helm, incluindo definições para projetos e aplicações que correspondem aos seus serviços.
+Conecte o ArgoCD ao seu repositório Git onde os Helm charts estão armazenados.
+
+Passo 6: Monitoramento com Prometheus e Grafana
+Configure o Monitoramento:
+Dentro de /kubernetes/helm/charts/prometheus e /kubernetes/helm/charts/grafana, configure os charts para o Prometheus e Grafana, respectivamente.
+Garanta que o Prometheus esteja configurado para coletar métricas dos seus serviços e que o Grafana possa acessar o Prometheus como fonte de dados.
+
+Passo 7: Commit Inicial e Documentação
+Versionamento e Documentação:
+Faça commits de sua configuração inicial no repositório Git e escreva a documentação básica no README.md explicando como configurar e implantar a infraestrutura.
+
+Passo 8: Implantação no EKS
+Implante no EKS:
+Use o script /scripts/deploy.sh para implantar os serviços no EKS. Se estiver utilizando ArgoCD, inicie-o primeiro e configure-o para assumir o gerenciamento dos deployments subsequentes.
+
+Passo 9: Verificação e Iteração
+Verifique e Itere:
+Após a implantação, verifique o funcionamento correto de todos os serviços.
+Faça ajustes necessários nos charts Helm e na configuração do Terraform com base nos resultados.
+
+Passo 10: Backup e Recuperação
+Planos de Backup e Recuperação:
+Estabeleça estratégias de backup e recuperação para suas configurações e dados essenciais.
