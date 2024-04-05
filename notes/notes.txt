@@ -2,6 +2,8 @@ Passo 1: Configurar o Cluster Kubernetes com Terraform
 Finalize a Configuração do EKS:
 Dentro da pasta /terraform, desenvolva o código necessário para provisionar o cluster EKS. Isso deve incluir a criação do VPC, subnets, grupo de segurança e o próprio cluster EKS.
 Teste e aplique sua configuração Terraform para criar o cluster na AWS.
+-- Lembrar de criar secret e afins
+
 
 Passo 2: Preparar Helm Charts
 Prepare Helm Charts Básicos:
