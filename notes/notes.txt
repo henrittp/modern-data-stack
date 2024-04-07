@@ -4,6 +4,8 @@ Dentro da pasta /terraform, desenvolva o código necessário para provisionar o 
 Teste e aplique sua configuração Terraform para criar o cluster na AWS.
 -- Lembrar de criar secret e afins
 
+-- Avaliar great expectations e pegar mais firme em data catalog + governance
+
 
 Passo 2: Preparar Helm Charts
 Prepare Helm Charts Básicos:
